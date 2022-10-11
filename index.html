@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+
+        }
+
+        :root {
+            --main-color: #039be5;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .errors {
+            font-size: 22px;
+            text-transform: capitalize;
+            color: red;
+            padding: 21px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            min-width: 350px;
+            max-width: 500px;
+            margin: auto;
+        }
+        @media (max-width:440px) {
+            .container{
+                margin: 0%;
+                width: 100%;
+            }
+        }
+
+        form input {
+            font-size: 22px;
+            padding: 10px;
+            border-radius: 9px;
+            border: none;
+            border: 1px solid #000000;
+        }
+
+        form input:focus {
+            border: 1px solid var(--main-color);
+            outline: 1px solid var(--main-color);
+            caret-color: var(--main-color);
+            color: var(--main-color);
+        }
+
+        form input:focus::placeholder {
+            color: var(--main-color);
+        }
+
+        form button {
+            width: fit-content;
+            padding: 8px 24px;
+            border: none;
+            border: 1px solid black;
+            border-radius: 24px;
+            background-color: var(--main-color);
+            color: white;
+            font-size: 21px;
+            transition: .15s;
+        }
+        form button.left {
+            transform: translateX(-66px);
+        }
+        form button.right {
+            transform: translateX(66px);
+        }
+        .d-flex p{
+            right: 3px;
+            margin: 0px;
+            background: var(--main-color);
+            color: white;
+            border-radius: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <input class="name" type="text" placeholder="Enter your Name">
+            <div class="d-flex w-100 align-items-center position-relative">
+                <input class="pass w-100" type="password" placeholder="Enter your Password">
+                <p class="position-absolute">ع</p>
+            </div>
+            <div class="d-flex w-100 align-items-center position-relative">
+                <input class="re-pass w-100" type="password" placeholder="Re-Enter your Password">
+                <p class="position-absolute">ع</p>
+            </div>
+            <input class="email" type="email" placeholder="Enter your Email">
+            <div class="b d-flex justify-content-center"> <button class="submit" type="submit">Submit</button></div>
+        </form>
+        <div class="errors"></div>
+    </div>
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
